@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SolvynAI - We deliver end-to-end smart solutions: agentic chat systems, websites, apps, CRM, and custom tools. Discovery, Development, and Delivery.">
+    <title>SolvynAI - End-to-end smart solutions</title>
+    <link rel="icon" href="./assets/light-fav.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./assets/dark-fav.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+                <div class="logo">
+                    <img src="./assets/logo-white.svg" alt="SolvynAI Logo">
+                </div>
+                <div class="nav-menu">
+                    <div class="language-selector">
+                        <button class="lang-toggle">
+                            <svg class="globe-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <span class="lang-text">en</span>
+                            <svg class="caret-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="lang-dropdown">
+                            <li><a href="#" data-lang="en">english</a></li>
+                            <li><a href="#" data-lang="pt-br">português BR</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-secondary get-in-touch-link"><span data-en="Get in touch" data-pt="Entre em contato">Get in touch</span></a>
+                </div>
+            </nav>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 data-en="Custom End-to-end intelligent solutions" data-pt="Soluções inteligentes de ponta a ponta">Custom End-to-end intelligent solutions</h1>
+                    <p data-en="We design and deliver custom intelligent solutions that help your teams move faster and your business scale smoothly." data-pt="Projetamos e entregamos soluções inteligentes personalizadas que ajudam suas equipes a terem melhor performance e seu negócio a escalar.">We design and deliver custom intelligent solutions that help your teams move faster and your business scale smoothly.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary get-in-touch-link"><span data-en="Get in touch" data-pt="Entre em contato">Get in touch</span></a>
+                        <a href="#services" class="btn-secondary"><span data-en="See what we do" data-pt="Veja o que fazemos">See what we do</span></a>
+                    </div>
+                </div>
+                <div class="hero-large-text">SOLVYN</div>
+            </section>
+
+            <section class="chat-section">
+                <div class="chat-container">
+                    <img src="./assets/logo-black.svg" alt="SolvynAI Logo">
+
+                    <div class="chat-welcome" id="chatWelcome">
+                        <h2 data-en="How can we help you?" data-pt="Como podemos ajudar você?">How can we help you?</h2>
+                    </div>
+                    <div class="chat-messages" id="chatMessages" data-scroll-section-inview style="display: none;">
+                        <!-- Messages will appear here -->
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Type a message to Maya..." data-placeholder-en="Type a message to Maya..." data-placeholder-pt="Digite uma mensagem para Maya..." />
+                        <div class="chat-input-actions">
+                            <button id="chatMicBtn" class="mic-btn" title="Record audio" data-title-en="Record audio" data-title-pt="Gravar áudio">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                                </svg>
+                            </button>
+                            <button id="chatSendBtn" class="send-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 5 5 12"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-footer">
+                        <p class="chat-disclaimer" data-en="Our agent might do mistakes. Please, check all important informations." data-pt="Nosso agente pode cometer erros. Por favor, verifique todas as informações importantes.">Our agent might do mistakes. Please, check all important informations.</p>
+                        <p class="chat-copyright">©2025 | by Solvyn</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="process-section">
+                <h2 class="section-title" data-en="How do we work?" data-pt="Como trabalhamos?">How do we work?</h2>
+                <div class="process-grid">
+                    <div class="process-card">
+                        <div class="process-card-image-container">
+                            <img src="./assets/we-discover-1.svg" alt="We discover" class="process-card-image">
+                            <img src="./assets/we-discover-2.svg" alt="" class="process-card-image-overlay">
+                        </div>
+                        <h3 data-en="We discover" data-pt="Nós descobrimos">We discover</h3>
+                        <p data-en="We dive into your company's structure, workflows, and day-to-day processes to understand how work really happens. We map dependencies, identify bottlenecks, and spot repetitive tasks that slow teams down." data-pt="Mergulhamos na estrutura da sua empresa, fluxos de trabalho e processos do dia a dia para entender como o trabalho realmente acontece. Mapeamos dependências, identificamos gargalos e detectamos tarefas repetitivas que atrasam as equipes.">We dive into your company's structure, workflows, and day-to-day processes to understand how work really happens. We map dependencies, identify bottlenecks, and spot repetitive tasks that slow teams down.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-card-image-container">
+                            <img src="./assets/we-discover-1.svg" alt="We develop" class="process-card-image">
+                            <img src="./assets/we-develop.svg" alt="" class="process-card-icon">
+                        </div>
+                        <h3 data-en="We develop" data-pt="Nós desenvolvemos">We develop</h3>
+                        <p data-en="Once we've uncovered the highest-impact opportunities, we co-design the right approach with your team. That means aligning on outcomes, defining what 'success' looks like, and ensuring the solution fits your context, stack, and culture." data-pt="Depois de descobrir as oportunidades de maior impacto, co-criamos a abordagem certa com sua equipe. Isso significa alinhar resultados, definir como é o 'sucesso' e garantir que a solução se encaixe no seu contexto, stack e cultura.">Once we've uncovered the highest-impact opportunities, we co-design the right approach with your team. That means aligning on outcomes, defining what "success" looks like, and ensuring the solution fits your context, stack, and culture.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-card-image-container">
+                            <img src="./assets/we-discover-1.svg" alt="We deliver" class="process-card-image">
+                            <img src="./assets/we-deliver.svg" alt="" class="process-card-icon">
+                        </div>
+                        <h3 data-en="We deliver" data-pt="Nós entregamos">We deliver</h3>
+                        <p data-en="We don't just deliver. We provide hands-on support, track results, and refine the system to match how teams actually work. We also partner with your leaders to guide change management: onboarding teams, defining best practices, and ensuring everyone knows when and how to use the solution effectively." data-pt="Não apenas entregamos. Damos suporte prático, acompanhamos resultados e refinamos o sistema para funcionar como as equipes trabalham. Também orientamos a gestão de mudanças: integrando equipes, definindo melhores práticas e garantindo que todos saibam usar a solução de forma eficaz.">We don't just deliver. We provide hands-on support, track results, and refine the system to match how teams actually work. We also partner with your leaders to guide change management: onboarding teams, defining best practices, and ensuring everyone knows when and how to use the solution effectively.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services-section" id="services">
+                <h2 class="section-title" data-en="What can we do for you?" data-pt="O que podemos fazer por você?">What can we do for you?</h2>
+                <p class="section-subtitle" data-en="End-to-end delivery of intelligent solutions tailored to your reality." data-pt="Entrega de ponta a ponta de soluções inteligentes adaptadas à sua realidade.">End-to-end delivery of intelligent solutions tailored to your reality.</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="./assets/rocket.svg" alt="" class="service-icon">
+                        <h3 data-en="End-to-end digital solutions" data-pt="Soluções digitais de ponta a ponta">End-to-end digital solutions</h3>
+                        <p data-en="From discovery to deployment, we design, build, and evolve intelligent systems that fit your business and drive measurable impact." data-pt="Da descoberta à implantação, projetamos, construímos e evoluímos sistemas inteligentes que se adequam ao seu negócio e geram impacto mensurável.">From discovery to deployment, we design, build, and evolve intelligent systems that fit your business and drive measurable impact.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="./assets/robot.svg" alt="" class="service-icon">
+                        <h3 data-en="Automation & AI" data-pt="Automação & IA">Automation & AI</h3>
+                        <p data-en="We automate workflows and create custom AI agents that eliminate repetitive work, accelerate delivery, and augment decision-making." data-pt="Automatizamos fluxos de trabalho e criamos agentes de IA personalizados que eliminam trabalho repetitivo, aceleram a entrega e aumentam a tomada de decisões.">We automate workflows and create custom AI agents that eliminate repetitive work, accelerate delivery, and augment decision-making.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="./assets/database-search.svg" alt="" class="service-icon">
+                        <h3 data-en="Data & Analytics" data-pt="Dados & Análise">Data & Analytics</h3>
+                        <p data-en="We structure your data foundation and turn it into clear dashboards and insights that guide smarter, faster actions." data-pt="Estruturamos sua base de dados e a transformamos em painéis e insights claros que orientam ações mais inteligentes e rápidas.">We structure your data foundation and turn it into clear dashboards and insights that guide smarter, faster actions.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="./assets/bolt.svg" alt="" class="service-icon">
+                        <h3 data-en="Tech advisory" data-pt="Consultoria técnica">Tech advisory</h3>
+                        <p data-en="We help leadership define the right roadmap, architecture, and AI strategy to scale technology safely and sustainably." data-pt="Ajudamos a liderança a definir o roteiro, arquitetura e estratégia de IA corretos para escalar a tecnologia de forma segura e sustentável.">We help leadership define the right roadmap, architecture, and AI strategy to scale technology safely and sustainably.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="./assets/devices-code.svg" alt="" class="service-icon">
+                        <h3 data-en="Websites & landing pages" data-pt="Sites & landing pages">Websites & landing pages</h3>
+                        <p data-en="We craft high-performance websites and landing pages focused on clarity, conversion, and a seamless user experience." data-pt="Criamos sites e landing pages de alto desempenho focados em clareza, conversão e uma experiência de usuário perfeita.">We craft high-performance websites and landing pages focused on clarity, conversion, and a seamless user experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ticker-section">
+                <h2 class="section-title" data-en="The technologies we use:" data-pt="As tecnologias que usamos:">The technologies we use:</h2>
+
+                <div class="ticker-wrapper">
+                    <div class="ticker">
+                        <div class="ticker-track">
+                            <img src="./assets/ticker/image 3.png" alt="Technology">
+                            <img src="./assets/ticker/image 4.png" alt="Technology">
+                            <img src="./assets/ticker/image 5.png" alt="Technology">
+                            <img src="./assets/ticker/image 6.png" alt="Technology">
+                            <img src="./assets/ticker/image 8.png" alt="Technology">
+                            <img src="./assets/ticker/image 9.png" alt="Technology">
+                            <img src="./assets/ticker/image 10.png" alt="Technology">
+                            <img src="./assets/ticker/image 11.png" alt="Technology">
+                            <img src="./assets/ticker/image 12.png" alt="Technology">
+                            <!-- Duplicate for seamless loop -->
+                            <img src="./assets/ticker/image 3.png" alt="Technology">
+                            <img src="./assets/ticker/image 4.png" alt="Technology">
+                            <img src="./assets/ticker/image 5.png" alt="Technology">
+                            <img src="./assets/ticker/image 6.png" alt="Technology">
+                            <img src="./assets/ticker/image 8.png" alt="Technology">
+                            <img src="./assets/ticker/image 9.png" alt="Technology">
+                            <img src="./assets/ticker/image 10.png" alt="Technology">
+                            <img src="./assets/ticker/image 11.png" alt="Technology">
+                            <img src="./assets/ticker/image 12.png" alt="Technology">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="cta-container">
+                    <h2 data-en="Ready to make intelligence stick in your operation?" data-pt="Pronto para fazer a inteligência funcionar na sua operação?">Ready to make intelligence stick in your operation?</h2>
+                    <p data-en="No fluff, no hard sell. Just a practical conversation about impact. Book a free call with us and find out what we can do for you." data-pt="Sem enrolação, sem venda forçada. Apenas uma conversa prática sobre impacto. Agende uma ligação gratuita conosco e descubra o que podemos fazer por você.">No fluff, no hard sell. Just a practical conversation about impact. Book a free call with us and find out what we can do for you.</p>
+                    <a href="#" class="btn-primary get-in-touch-link"><span data-en="Book your call now" data-pt="Agende sua ligação agora">Book your call now</span></a>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <img src="./assets/logo-white.svg" alt="SolvynAI Logo" class="footer-logo">
+                        <div class="footer-links">
+                            <a href="#privacy" data-en="Privacy Policies" data-pt="Políticas de Privacidade">Privacy Policies</a>
+                            <a href="#terms" data-en="Use Terms" data-pt="Termos de Uso">Use Terms</a>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <p data-en="Copyright © 2025 Inc. All rights reserved." data-pt="Copyright © 2025 Inc. Todos os direitos reservados.">Copyright © 2025 Inc. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="chat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
