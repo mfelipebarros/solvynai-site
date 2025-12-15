@@ -251,6 +251,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle back to home links with language parameter
+    document.querySelectorAll('a[href="index.html"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en';
+            window.location.href = `index.html?lang=${lang}`;
+        });
+    });
+
     if (langDropdown) {
         langDropdown.addEventListener('click', function(e) {
             if (e.target.tagName === 'A') {
