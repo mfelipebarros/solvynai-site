@@ -161,6 +161,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        // Update page title and meta description
+        if (lang === 'en') {
+            document.title = 'SolvynAI - End-to-end smart solutions';
+            document.querySelector('meta[name="description"]').setAttribute('content',
+                'SolvynAI - We deliver end-to-end smart solutions: agentic chat systems, websites, apps, CRM, and custom tools. Discovery, Development, and Delivery.');
+            document.documentElement.lang = 'en';
+        } else if (lang === 'pt-br') {
+            document.title = 'SolvynAI - Soluções inteligentes de ponta a ponta';
+            document.querySelector('meta[name="description"]').setAttribute('content',
+                'SolvynAI - Entregamos soluções inteligentes de ponta a ponta: sistemas de chat com agentes, sites, apps, CRM e ferramentas personalizadas. Descoberta, Desenvolvimento e Entrega.');
+            document.documentElement.lang = 'pt-BR';
+        }
+
         const elements = document.querySelectorAll('[data-en][data-pt]');
         elements.forEach(element => {
             // Skip the language selector text
