@@ -1119,7 +1119,7 @@ nav {
 .footer-left {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 .footer-logo {
