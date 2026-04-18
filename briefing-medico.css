@@ -1,0 +1,368 @@
+/* =====================
+   Briefing Page
+   ===================== */
+
+body {
+    overflow: hidden;
+}
+
+/* Step counter */
+.briefing-step-counter {
+    position: fixed;
+    top: 1.5rem;
+    right: 5%;
+    font-family: 'Domine', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    z-index: 100;
+}
+
+.step-divider {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* =====================
+   Section
+   ===================== */
+.briefing-section {
+    height: 100dvh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image — full opacity */
+.briefing-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/bg-briefing.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    filter: saturate(0%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    z-index: 0;
+}
+
+/* Gradient glow */
+.briefing-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    width: 120%;
+    height: 80vh;
+    background: radial-gradient(ellipse 200% 100% at center, #FFD857 0%, #FF310C 25%, #03030395 75%, #03030300 100%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* =====================
+   Steps Wrapper
+   ===================== */
+.briefing-steps-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1432px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+/* =====================
+   Individual Step
+   ===================== */
+.briefing-step {
+    display: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    opacity: 0;
+}
+
+.briefing-step.active {
+    display: flex;
+}
+
+/* Left panel */
+.briefing-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 541px;
+    flex-shrink: 0;
+}
+
+.briefing-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.briefing-step-title {
+    font-family: 'Domine', serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: #FCFBFC;
+    line-height: 1.1;
+}
+
+/* Right panel */
+.briefing-right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 764px;
+    flex-shrink: 0;
+}
+
+.briefing-question {
+    font-family: 'Domine', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #FCFBFC;
+    line-height: 1.5;
+}
+
+.briefing-question em {
+    color: #FCFBFC;
+    font-style: italic;
+}
+
+/* Textarea */
+.briefing-textarea {
+    width: 100%;
+    height: 200px;
+    background: rgba(143, 143, 143, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FCFBFC;
+    resize: none;
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: border-color 0.3s ease;
+}
+
+.briefing-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.briefing-textarea:focus {
+    border-color: rgba(255, 49, 12, 0.5);
+}
+
+/* Actions row */
+.briefing-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Next / Submit button */
+.briefing-next-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #FF310C;
+    color: #FCFBFC;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Domine', serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.briefing-next-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(-101%);
+    transition: transform 0.4s ease;
+}
+
+.briefing-next-btn:hover::before {
+    transform: translateX(0);
+}
+
+.briefing-next-btn:active {
+    transform: scale(0.97);
+}
+
+/* Back button */
+.briefing-back-btn {
+    background: none;
+    border: none;
+    font-family: 'Domine', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.briefing-back-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #FCFBFC;
+    transition: width 0.3s ease;
+}
+
+.briefing-back-btn:hover {
+    color: #FCFBFC;
+}
+
+.briefing-back-btn:hover::after {
+    width: 100%;
+}
+
+/* =====================
+   Thank You Screen
+   ===================== */
+.briefing-thankyou {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+}
+
+.briefing-thankyou-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 600px;
+}
+
+.briefing-thankyou-content h2 {
+    font-family: 'Domine', serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: #FCFBFC;
+}
+
+.briefing-thankyou-content p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #DEDEDE;
+    line-height: 1.6;
+}
+
+/* =====================
+   Big Bottom Text — gradient like the reference
+   ===================== */
+.briefing-large-text {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    font-family: 'Nohemi', sans-serif;
+    font-size: 20vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    letter-spacing: -0.02em;
+    /* gradient: grey at top fading to transparent so orange glow shows through below */
+    background: linear-gradient(to bottom, #DEDEDE 0%, rgba(222, 222, 222, 0) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =====================
+   Mobile
+   ===================== */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .briefing-section {
+        height: auto;
+        min-height: 100dvh;
+        align-items: flex-start;
+        padding: 80px 0 140px;
+    }
+
+    .briefing-steps-wrapper {
+        padding: 0 20px;
+    }
+
+    .briefing-step {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .briefing-left {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .briefing-step-title {
+        font-size: 30px;
+    }
+
+    .briefing-right {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .briefing-question {
+        font-size: 17px;
+    }
+
+    .briefing-textarea {
+        height: 150px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .briefing-next-btn {
+        font-size: 17px;
+        padding: 14px 24px;
+    }
+
+    .briefing-large-text {
+        display: none;
+    }
+
+    .briefing-section::after {
+        width: 500%;
+    }
+
+    .briefing-thankyou-content h2 {
+        font-size: 36px;
+    }
+
+    .briefing-thankyou-content p {
+        font-size: 16px;
+    }
+}
