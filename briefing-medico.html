@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Briefing Médico - SolvynAI">
+    <title>Briefing Médico - SolvynAI</title>
+    <link rel="icon" href="./assets/light-fav.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./assets/dark-fav.svg" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="briefing-medico.css">
+</head>
+<body>
+
+    <div class="briefing-step-counter" id="stepCounter">
+        <span id="stepCurrentNum">01</span>
+        <span class="step-divider">/</span>
+        <span id="stepTotalNum">09</span>
+    </div>
+
+    <section class="briefing-section">
+
+        <div class="briefing-steps-wrapper" id="briefingStepsWrapper">
+
+            <!-- Step 1 -->
+            <div class="briefing-step active" data-step="1">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Identidade e Posicionamento</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Como você quer ser lembrado por quem acessa seu site pela primeira vez? <em>(ex: "o cardiologista mais completo da região", "referência em diagnóstico preciso", "atendimento humanizado e de confiança")</em></p>
+                    <textarea class="briefing-textarea" id="answer1" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="briefing-step" data-step="2">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Identidade e Posicionamento</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">O que te diferencia dos outros serviços de cardiologia da região? <em>(ex: equipamentos mais modernos, resultado online, equipe especializada, estrutura hospitalar)</em></p>
+                    <textarea class="briefing-textarea" id="answer2" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="briefing-step" data-step="3">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Identidade e Posicionamento</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Se você tivesse que definir seu serviço em uma frase, qual seria? <em>(ex: "Diagnóstico rápido, tratamento preciso, cuidado humano")</em></p>
+                    <textarea class="briefing-textarea" id="answer3" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="briefing-step" data-step="4">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Público</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Quem é seu paciente ideal? <em>(ex: adultos acima de 40 anos, atletas, pacientes com histórico familiar cardíaco)</em></p>
+                    <textarea class="briefing-textarea" id="answer4" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="briefing-step" data-step="5">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Público</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Você atende mais por plano, particular ou ambos?</p>
+                    <textarea class="briefing-textarea" id="answer5" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="briefing-step" data-step="6">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Público</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Médicos que encaminham pacientes são um público importante para você? <em>(ex: clínicos gerais, endocrinologistas, ortopedistas)</em></p>
+                    <textarea class="briefing-textarea" id="answer6" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="briefing-step" data-step="7">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Rosto e Autoridade</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Você tem fotos profissionais disponíveis? <em>(ex: foto de perfil, fotos no consultório, atendendo pacientes, com equipamentos)</em></p>
+                    <textarea class="briefing-textarea" id="answer7" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="briefing-step" data-step="8">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Rosto e Autoridade</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Tem depoimentos de pacientes que poderíamos usar? <em>(ex: relatos escritos, avaliações do Google, vídeos)</em></p>
+                    <textarea class="briefing-textarea" id="answer8" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn">Seguinte</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 9 -->
+            <div class="briefing-step" data-step="9">
+                <div class="briefing-left">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2 class="briefing-step-title">Rosto e Autoridade</h2>
+                </div>
+                <div class="briefing-right">
+                    <p class="briefing-question">Quais são suas principais formações e certificações? <em>(ex: residência, título de especialista, fellowship, instituição de referência onde se formou)</em></p>
+                    <textarea class="briefing-textarea" id="answer9" placeholder="Escreva aqui..."></textarea>
+                    <div class="briefing-actions">
+                        <button class="briefing-next-btn briefing-submit-btn">Enviar</button>
+                        <button class="briefing-back-btn" onclick="prevStep()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You -->
+            <div class="briefing-thankyou" id="briefingThankyou">
+                <div class="briefing-thankyou-content">
+                    <img src="./assets/dark-fav.svg" alt="" class="briefing-icon">
+                    <h2>Obrigado!</h2>
+                    <p>Recebemos seu briefing. Em breve entraremos em contato para começar a trabalhar na sua solução.</p>
+                    <a href="index.html" class="btn-primary"><span>Voltar ao início</span></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="briefing-large-text" id="briefingLargeText">BRIEFING</div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="briefing-medico.js"></script>
+</body>
+</html>
